@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Installing Python</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+  <h1>How to install Python</h1>
+  <a
+    href="https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server-fr">Installing
+    Python</a>
+  <p>
+    https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-an-ubuntu-20-04-server-fr
+  </p>
+
+  <h2>Check if is installed (on ubuntu)</h2>
+
+  <ul>python --version</ul>
+  <ul>python3 -V</ul>
+
+  <h2>Install Python Interface Package (package manager)</h2>
+  <ul>sudo apt install -y python3-pip</ul>
+
+  <h2>Other libraries</h2>
+  <ul>sudo apt install -y build-essential libssl-dev libffi-dev python3-dev</ul>
+
+  <h2>Install tools for environments</h2>
+  <ul>sudo apt install -y python3-venv</ul>
+  <ul>sudo pip3 install virtualenv</ul>
+
+  <h2>Test Python</h2>
+  <ul>mkdir Python/Test</ul>
+  <ul>cd Python/Test</ul>
+  <ul>create a setup.sh file</ul>
+  <ul>sudo chmod +x setup.sh</ul>
+  <ul>./setup.sh </ul>
+
+<h2>setup.sh looks like this</h2>
+<textarea rows="4" cols="50">
+#CREATE VIRTUAL ENVIRONMENT
+virtualenv -p python3 env/ 
+#ACTIVATE THE ENVIRONMENT
+source env/bin/activate
+#INSTALL FLASK INSIDE THE ENVIRONMENT
+pip install flask
+</textarea>
+
+</body>
+
+</html>
